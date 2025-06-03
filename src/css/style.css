@@ -51,9 +51,21 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+nav ul li :hover{
+    color: rgba(102, 94, 137, 1);
+}
 
 .temas{
     background-color: rgba(102, 94, 137, 1);
     border-radius: 30px;
     padding: 5px 10px;
 }
+header button{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border-style: none;
+}
+#dark-mode{background-color: var(--dark);}
+#standart-mode{background-color: var(--standart);}
+#black-mode{background-color: black;}
