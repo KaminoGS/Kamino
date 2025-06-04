@@ -1,11 +1,21 @@
-const links = document.querySelectorAll("nav ul li a");
-const sections = document.querySelectorAll("main section");
+const standart = document.getElementById("standart-mode");
+const dark = document.getElementById("dark-mode");
+const black = document.getElementById("black-mode");
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const top = section.offsetTop - 100;
-    if (scrollY >= top) {
-      current = section.id;
+function applytheme(themeClass){
+    document.body.classList.remove("darkcolors", "blackcolors")
+
+    if(themeClass !== "standart"){
+        document.body.classList.add(themeClass)
     }
-  });
+}
+
+standart.addEventListener("click", () => {
+    applytheme("standart"); 
+});
+dark.addEventListener("click", () => {
+    applytheme("darkcolors"); 
+});
+black.addEventListener("click", () => {
+    applytheme("blackcolors"); 
+});

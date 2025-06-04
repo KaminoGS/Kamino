@@ -1,18 +1,22 @@
 :root {
   --header: rgba(34, 29, 63, 1);
-
   --standart:rgba(255, 255, 255, 0.94);
-  --standarttexto: #D9D9D9;
-  --standarttitulo: rgba(34, 29, 63, 1);
+  --texto: #616161;
+  --titulo: rgba(34, 29, 63, 1);
+}
 
-  --dark: rgba(26, 25, 38, 1);
-  --darktexto: rgba(182, 182, 182, 1);
-  --darktitulo:rgba(243, 242, 248, 1);
+body.darkcolors{
+  --header: rgba(34, 29, 63, 1);
+  --standart: rgba(26, 25, 38, 1);
+  --texto: rgba(182, 182, 182, 1);
+  --titulo:rgba(243, 242, 248, 1);
+}
 
-  --headerblack: rgba(14, 10, 38, 1);
-  --black: black;
-  --blacktexto:rgba(217, 217, 217, 1);
-  --blacktitulo:rgba(243, 243, 243, 1);
+body.blackcolors{
+  --header:rgba(14, 10, 38, 1);
+  --standart: black;
+  --texto:rgb(177, 177, 177);
+  --titulo:rgb(226, 226, 226);
 }
 
 body{
@@ -67,10 +71,9 @@ header button{
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border-style: none;
 }
-#dark-mode{background-color: var(--dark);}
-#standart-mode{background-color: var(--standart);}
+#dark-mode{background-color:rgba(10, 3, 50, 1) }
+#standart-mode{background-color: white}
 #black-mode{background-color: black;}
 
 /* ----------------------------------------------------------- HOME --------------------------------------------*/
@@ -110,7 +113,7 @@ margin-bottom: 3rem;
 
 /* -------------------- QUIZ REDIRECT --------------------*/
 #quizbotao{
-    background-color: var(--standarttexto);
+    background-color: rgba(217, 217, 217, 1);
     display: flex;
     border-radius: 40px;
     width: 25%;
@@ -118,6 +121,7 @@ margin-bottom: 3rem;
     gap: 25px;
     padding-left: 20px;
     color: var(--header);
+    
 }
 #quiz{
     justify-content: center;
@@ -126,6 +130,7 @@ margin-bottom: 3rem;
     width: 50px;
     border-style: none;
     background-color: var(--header);
+    
 }
 
 
@@ -135,4 +140,20 @@ margin-bottom: 3rem;
   max-width: 900px;
   margin: auto;
   border-bottom: 1px solid #ccc;
+}
+
+.secoes h2{
+    color: var(--titulo);
+}
+
+.secoes p{
+    color: var(--texto);
+}
+.secoes li{
+    color: var(--texto);
+}
+.secoes h4 {
+    color: var(--texto);
+    margin-bottom: 0rem;
+    margin-top: 2rem;
 }
