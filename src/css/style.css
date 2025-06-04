@@ -3,6 +3,7 @@
   --standart:rgba(255, 255, 255, 0.94);
   --texto: #616161;
   --titulo: rgba(34, 29, 63, 1);
+  --itens:rgba(217, 217, 217, 1);
 }
 
 body.darkcolors{
@@ -10,6 +11,7 @@ body.darkcolors{
   --standart: rgba(26, 25, 38, 1);
   --texto: rgba(182, 182, 182, 1);
   --titulo:rgba(243, 242, 248, 1);
+  --itens:rgba(34, 29, 63, 1);
 }
 
 body.blackcolors{
@@ -17,6 +19,7 @@ body.blackcolors{
   --standart: black;
   --texto:rgb(177, 177, 177);
   --titulo:rgb(226, 226, 226);
+  --itens:rgba(14, 10, 38, 1);
 }
 
 body{
@@ -61,6 +64,11 @@ nav ul li :hover{
     color: rgba(102, 94, 137, 1);
 }
 
+nav ul li a.active {
+    border-bottom: 4px solid rgba(102, 94, 137, 1);
+    padding-bottom: 5px;
+}
+
 /* -------------------- TEMAS --------------------*/
 .temas{
     background-color: rgba(102, 94, 137, 1);
@@ -71,6 +79,7 @@ header button{
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
+    border-style: none;
 }
 #dark-mode{background-color:rgba(10, 3, 50, 1) }
 #standart-mode{background-color: white}
@@ -117,17 +126,26 @@ margin-bottom: 3rem;
     display: flex;
     border-radius: 40px;
     width: 25%;
+    max-width: 300px;
     align-items: center;
-    gap: 25px;
-    padding-left: 20px;
+    gap: 1rem;
+    padding-left: 1rem;
     color: var(--header);
-    
+    margin: 20px auto;
+}
+#quizbotao h2{
+    font-size: 1.4rem;
+    font-weight: 1000;
+     white-space: nowrap; 
 }
 #quiz{
     justify-content: center;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-style: none;
     background-color: var(--header);
     
@@ -135,6 +153,11 @@ margin-bottom: 3rem;
 
 
 /* --------------------------------------------------------- SEÇÕES --------------------------------------------*/
+
+.secoes img{
+    width: 100%;
+}
+
 .secoes{
   padding: 60px 20px;
   max-width: 900px;
@@ -144,16 +167,43 @@ margin-bottom: 3rem;
 
 .secoes h2{
     color: var(--titulo);
+    font-size: 2.1rem;
 }
 
 .secoes p{
     color: var(--texto);
+    font-size: 1.2rem;
 }
 .secoes li{
     color: var(--texto);
+    font-size: 1.2rem;
 }
 .secoes h4 {
     color: var(--texto);
     margin-bottom: 0rem;
     margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+#teciten{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.itenstec{
+ background-color: var(--itens);
+ border-radius: 20px;
+ padding: 10px;
+ height: 8rem;
+ width: 15%;
+}
+.itenstec p{
+    color: var(--titulo);
+    font-weight: 800;
+    font-size: medium;
+    text-align: center;
 }
