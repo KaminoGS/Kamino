@@ -149,9 +149,12 @@ margin-bottom: 3rem;
     justify-content: center;
     border-style: none;
     background-color: var(--header);
-    
 }
 
+#quiz img{
+    width: 1.4rem;
+    padding-top: 4px;
+}
 
 /* --------------------------------------------------------- SEÇÕES --------------------------------------------*/
 
