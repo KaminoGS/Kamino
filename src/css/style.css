@@ -1,18 +1,25 @@
 :root {
   --header: rgba(34, 29, 63, 1);
-
   --standart:rgba(255, 255, 255, 0.94);
-  --standarttexto: #D9D9D9;
-  --standarttitulo: rgba(34, 29, 63, 1);
+  --texto: #616161;
+  --titulo: rgba(34, 29, 63, 1);
+  --itens:rgba(217, 217, 217, 1);
+}
 
-  --dark: rgba(26, 25, 38, 1);
-  --darktexto: rgba(182, 182, 182, 1);
-  --darktitulo:rgba(243, 242, 248, 1);
+body.darkcolors{
+  --header: rgba(34, 29, 63, 1);
+  --standart: rgba(26, 25, 38, 1);
+  --texto: rgba(182, 182, 182, 1);
+  --titulo:rgba(243, 242, 248, 1);
+  --itens:rgba(34, 29, 63, 1);
+}
 
-  --headerblack: rgba(14, 10, 38, 1);
-  --black: black;
-  --blacktexto:rgba(217, 217, 217, 1);
-  --blacktitulo:rgba(243, 243, 243, 1);
+body.blackcolors{
+  --header:rgba(14, 10, 38, 1);
+  --standart: black;
+  --texto:rgb(177, 177, 177);
+  --titulo:rgb(226, 226, 226);
+  --itens:rgba(14, 10, 38, 1);
 }
 
 body{
@@ -21,18 +28,19 @@ body{
     background-color: var(--standart)
 }
 
+/* --------------------------------------------------------- HEADER -------------------------------------------*/
 header{
   background-color: var(--header);
   position: fixed;
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 10;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 5px;
+  top: 0;
 }
-
+/* -------------------- LOGO --------------------*/
 .logo{
     display: flex;
     align-items: center;
@@ -40,12 +48,13 @@ header{
     padding-left: 5px;
 }
 
+/* -------------------- NAV --------------------*/
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  padding-left: 100px;
 }
 nav ul li a {
   color: white;
@@ -55,10 +64,16 @@ nav ul li :hover{
     color: rgba(102, 94, 137, 1);
 }
 
+nav ul li a.active {
+    border-bottom: 4px solid rgba(102, 94, 137, 1);
+    padding-bottom: 5px;
+}
+
+/* -------------------- TEMAS --------------------*/
 .temas{
     background-color: rgba(102, 94, 137, 1);
     border-radius: 30px;
-    padding: 5px 10px;
+    padding: 4px 10px 1px;
 }
 header button{
     width: 1.5rem;
@@ -66,6 +81,129 @@ header button{
     border-radius: 50%;
     border-style: none;
 }
-#dark-mode{background-color: var(--dark);}
-#standart-mode{background-color: var(--standart);}
+#dark-mode{background-color:rgba(10, 3, 50, 1) }
+#standart-mode{background-color: white}
 #black-mode{background-color: black;}
+
+/* ----------------------------------------------------------- HOME --------------------------------------------*/
+#home{
+    padding-top: 5rem;
+    background-color: var(--header);
+    color: #D9D9D9;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* -------------------- TEXTOS --------------------*/
+#titulo{
+margin-top: 6rem;
+margin-bottom: 3rem;
+}
+
+.textohome{
+    font-size:4rem;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    font-weight: 9;
+}
+
+#subtitulo{
+    font-size: 1.5rem;
+    font-weight: 9;
+    color: rgba(211, 210, 210, 1);
+    margin-bottom: 5rem;
+    margin-top: 0.5rem;
+
+}
+
+/* -------------------- QUIZ REDIRECT --------------------*/
+#quizbotao{
+    background-color: rgba(217, 217, 217, 1);
+    display: flex;
+    border-radius: 40px;
+    width: 25%;
+    max-width: 300px;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    color: var(--header);
+    margin: 20px auto;
+}
+#quizbotao h2{
+    font-size: 1.4rem;
+    font-weight: 1000;
+     white-space: nowrap; 
+}
+#quiz{
+    justify-content: center;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    background-color: var(--header);
+    
+}
+
+
+/* --------------------------------------------------------- SEÇÕES --------------------------------------------*/
+
+.secoes img{
+    width: 100%;
+}
+
+.secoes{
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.secoes h2{
+    color: var(--titulo);
+    font-size: 2.1rem;
+}
+
+.secoes p{
+    color: var(--texto);
+    font-size: 1.2rem;
+}
+.secoes li{
+    color: var(--texto);
+    font-size: 1.2rem;
+}
+.secoes h4 {
+    color: var(--texto);
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+
+#teciten{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.itenstec{
+ background-color: var(--itens);
+ border-radius: 20px;
+ padding: 10px;
+ height: 8rem;
+ width: 15%;
+}
+.itenstec p{
+    color: var(--titulo);
+    font-weight: 800;
+    font-size: medium;
+    text-align: center;
+}
