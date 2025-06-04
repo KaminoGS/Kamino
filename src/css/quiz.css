@@ -79,7 +79,7 @@ main{
     flex-direction: column;
     padding: 5px;
     font-family: 'Inter';
-
+    align-items: center;
 }
 .pergunta-sec{
     width: 100%;
@@ -118,4 +118,20 @@ input{
 input:checked{
     border: 5px solid var(--headerblack);
 }
+form button{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid var(--header);
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Inter';
+    color: var(--header);
+    font-size: 1.1rem;
+    margin-top: 100px;
+    transition: 0.3s ease-in-out;
+}
 
+form button:hover{
+    background-color: rgb(229, 224, 255);
+}
