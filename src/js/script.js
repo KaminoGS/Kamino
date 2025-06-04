@@ -51,3 +51,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activateNavLink();
 });
+
+
+//--------------------------------------------------------------------------------carrossel
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carrosselElement = document.querySelector('.janela-carrossel');
+    const totalItems = document.querySelectorAll('.imgcarrossel').length; //length (len)
+    const viewPortWidth = document.querySelector('#carrossel-container').offsetWidth; // pega largura
+    
+    let currentIndex = 0;
+    const slideInterval = 3000; // tempo de transição
+
+    function updateCarrosselPosition() {
+        carrosselElement.style.transform = `translateX(${-currentIndex * viewPortWidth}px)`;
+    }
+
+    function nextSlide() {
+        if (currentIndex < totalItems - 1) { //conta os slides, se chegar no final, zera
+            currentIndex++;
+        } else {
+            currentIndex =0;
+        }
+        updateCarrosselPosition();
+    }
+
+    setInterval(nextSlide, slideInterval);
+
+    window.addEventListener('resize', () => {
+        viewPortWidth = document.querySelector('#carrossel-container').offsetWidth;
+        updateCarrosselPosition(); 
+    });
+    
+    updateCarrosselPosition();
+});

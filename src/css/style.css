@@ -39,6 +39,7 @@ header{
   box-sizing: border-box;
   padding: 5px;
   top: 0;
+  z-index: 2;
 }
 /* -------------------- LOGO --------------------*/
 .logo{
@@ -206,4 +207,31 @@ margin-bottom: 3rem;
     font-weight: 800;
     font-size: medium;
     text-align: center;
+}
+
+/* --------------------------------------------------------- SLIDE SHOW --------------------------------------------*/
+
+/* --------------------------------------------------------- SLIDE SHOW --------------------------------------------*/
+
+#carrossel-container {
+    overflow: hidden; 
+    position: relative; 
+}
+
+.janela-carrossel {
+    width: 100%;
+    display: flex; 
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+.imgcarrossel {
+    min-width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgcarrossel img {
+    max-width: 100%; 
+    height: auto; 
 }
