@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
   --header: rgba(34, 29, 63, 1);
   --standart:rgba(255, 255, 255, 0.94);
@@ -60,6 +62,8 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-family: "Inter", sans-serif;
+
 }
 nav ul li :hover{
     color: rgba(102, 94, 137, 1);
@@ -147,27 +151,22 @@ margin-bottom: 3rem;
 }
 
 /* -------------------- QUIZ REDIRECT --------------------*/
-#quizbotao{
-    
-}
-#quizbotao h2{
-    
-}
+
 #quiz{
     background-color: rgba(217, 217, 217, 1);
     border-style: none;
     display: flex;
     justify-content: center;
     border-radius: 40px;
-    width: 400px;
+    width: 330px;
     height: 60px;
     align-items: center;
-    gap: 1rem;
+    gap: 1.8rem;
     padding-left: 1rem;
     color: var(--header);
     margin: 20px auto;
     font-size: 1.4rem;
-    font-weight: 1000;
+    font-weight: 750;
     white-space: nowrap; 
     cursor: pointer;
     padding: 5px;
@@ -201,21 +200,28 @@ margin-bottom: 3rem;
 .secoes h2{
     color: var(--titulo);
     font-size: 2.1rem;
+    font-family: "Inter", sans-serif;
 }
 
 .secoes p{
     color: var(--texto);
     font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+
 }
 .secoes li{
     color: var(--texto);
     font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+
 }
 .secoes h4 {
     color: var(--texto);
     margin-bottom: 0rem;
     margin-top: 2rem;
     font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+
 }
 
 #teciten{
