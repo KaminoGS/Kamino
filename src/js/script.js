@@ -110,3 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+
+function quiz(){
+    window.location.href = "./src/pages/quiz.html"
+}

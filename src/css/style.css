@@ -148,38 +148,42 @@ margin-bottom: 3rem;
 
 /* -------------------- QUIZ REDIRECT --------------------*/
 #quizbotao{
+    
+}
+#quizbotao h2{
+    
+}
+#quiz{
     background-color: rgba(217, 217, 217, 1);
+    border-style: none;
     display: flex;
+    justify-content: center;
     border-radius: 40px;
-    width: 25%;
-    max-width: 300px;
+    width: 400px;
+    height: 60px;
     align-items: center;
     gap: 1rem;
     padding-left: 1rem;
     color: var(--header);
     margin: 20px auto;
-}
-#quizbotao h2{
     font-size: 1.4rem;
     font-weight: 1000;
-     white-space: nowrap; 
+    white-space: nowrap; 
+    cursor: pointer;
+    padding: 5px;
+    
 }
-#quiz{
-    justify-content: center;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-style: none;
+#quiz p{
+    width: 50px;
+    height: 50px;
     background-color: var(--header);
+    border-radius: 50%;
+}
+#quiz p img{
+    margin-top: 10px;
 }
 
-#quiz img{
-    width: 1.4rem;
-    padding-top: 4px;
-}
+
 
 /* --------------------------------------------------------- SEÇÕES --------------------------------------------*/
 
