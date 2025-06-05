@@ -85,3 +85,28 @@ document.addEventListener('DOMContentLoaded', () => {
     
     updateCarrosselPosition();
 });
+
+
+//----------------------------------------------------------------- hambuquer menu --------------------------
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = document.querySelectorAll('.nav-links ul li a'); 
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active'); 
+        hamburgerMenu.classList.toggle('active'); 
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active'); 
+            hamburgerMenu.classList.remove('active'); 
+        });
+    });
+
+});
